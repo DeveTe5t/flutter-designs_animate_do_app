@@ -4,6 +4,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '/src/pages/twitter_page.dart';
+import '/src/pages/navigation_page.dart';
 
 class Page1 extends StatelessWidget {
   const Page1({super.key});
@@ -75,7 +76,12 @@ class Page1 extends StatelessWidget {
       ),
       floatingActionButton: ElasticInRight(
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const NavigationPage()),
+            );
+          },
           child: const FaIcon(FontAwesomeIcons.play),
         ),
       ),
